@@ -18,6 +18,7 @@ module.exports = {
         
         }
     },
+    mode: 'development',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].[hash:8].js'
@@ -88,7 +89,7 @@ module.exports = {
             filename: './index.html'
         }),
         new VueLoaderPlugin(),
-        new webpackBar(),
+        // new webpackBar(),
         new ExtractTextPlugin('css/[name].[hash:8].css'),
         new CleanWebpackPlugin()
     ],

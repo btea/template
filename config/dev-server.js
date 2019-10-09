@@ -7,7 +7,11 @@ const options = {
     contentBase: './dist',
     hot: true,
     host: 'localhost',
-    mode: 'development'
+    // mode: 'development'
+    // port: port,
+    // after: function(app){
+    //     console.log('finished');
+    // }
 };
 
 webpackDevServer.addDevServerEntrypoints(config, options);
