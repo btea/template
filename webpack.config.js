@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlVwebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var VueLoaderPlugin = require('vue-loader/lib/plugin');
 var webpackBar  = require('webpackbar');
@@ -83,7 +83,7 @@ module.exports = {
         }
     },
     plugins: [
-        new HtmlVwebpackPlugin({
+        new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: './index.html'
         }),
