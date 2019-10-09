@@ -57,14 +57,21 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'img/[hash:8].[ext]'
+                    name: 'img/[name].[hash:8].[ext]'
                 }
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
                 loader: 'file-loader',
                 options: {
-                    name: 'fonts/[hash:8].[ext]'
+                    name: 'fonts/[name].[hash:8].[ext]'
+                }
+            },
+            {
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|acc)(\?.*)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'media/[name].[hash:8].[ext]'
                 }
             }
         ]
