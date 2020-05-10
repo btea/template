@@ -9,8 +9,9 @@ import './error/error';
 import App from './App';
 import router from './router/router'
 
-new Vue({
+let app = new Vue({
     el: '#app',
     router,
     render: h => h(App)
 })
+console.log(app)

@@ -6,11 +6,18 @@
         </div>
         <img src="../public/img/bird.png" alt="">
         <router-view></router-view>
+        <div>按钮</div>
     </div>
 
 </template>
 <script>
 export default {
+    provide: function() {
+        return {
+            name: '阎魔爱',
+            message: '一杯，新的米露？'
+        }
+    },
     data(){
         return {
             routerData: [
