@@ -6,6 +6,7 @@ var VueLoaderPlugin = require('vue-loader/lib/plugin');
 var webpackBar  = require('webpackbar');
 var proxy = require('http-proxy-middleware');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const hotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin');
 
 module.exports = {
     performance: {
@@ -91,7 +92,8 @@ module.exports = {
         new VueLoaderPlugin(),
         new webpackBar(),
         new ExtractTextPlugin('css/[name].[hash:8].css'),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
+        new hotModuleReplacementPlugin()
     ],
     devServer: {
         proxy: {
